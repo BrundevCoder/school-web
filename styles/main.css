@@ -10,7 +10,12 @@
 
 body {
   background: var(--main-bg-color);
+  min-height: 100vh;
   transition: background 100ms ease;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .header {
@@ -21,12 +26,18 @@ body {
   border-color: var(--main-bg-border);
 }
 
+h1, h2, h3 {
+  font-family: "Holtwood One SC", serif;
+  color: var(--main-font-color);
+}
+
 .name {
   font-family: "Holtwood One SC", serif;
   color: var(--main-font-color);
 }
 
 #modeBtn {
+  cursor: pointer;
   background: var(--main-btn-color);
   color: var(--main-font-color);
   position: fixed;
@@ -48,4 +59,80 @@ body {
 #modeBtn:active {
   transform: translateY(2.5px) translateX(2.5px);
   box-shadow: 1px 1px var(--main-bg-border);
+}
+
+/* MAIN */
+
+.about-me {
+  padding: 1rem;
+  margin-top: 7rem;
+  margin-bottom: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.g1 {
+  font-size: 1.85rem;
+  text-align: center;
+  max-width: 300px;
+}
+
+.group2 {
+  display: grid;
+}
+
+a,
+button {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Rubik", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  background: var(--main-btn-color);
+  color: var(--main-font-color);
+  margin: 0.5rem;
+  padding: 1rem 2.5rem;
+  border: 3px solid;
+  border-radius: 24px;
+  box-shadow: 3px 3px 0 var(--main-bg-border);
+  transition: 100ms ease;
+}
+
+a:hover,
+button:hover {
+  transform: translateY(1.5px) translateX(1.5px);
+  box-shadow: 2px 2px var(--main-bg-border);
+}
+
+a:active,
+button:active {
+  transform: translateY(2.5px) translateX(2.5px);
+  box-shadow: 1px 1px var(--main-bg-border);
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rem;
+}
+
+.about-title {
+  font-size: 1.75rem;
+}
+
+/* Responsive */
+
+@media (max-width: 400px) {
+  .about-me {
+    flex-direction: column;
+  }
+  #modeBtn {
+    padding: 0.75rem 0.75rem;
+    font-size: 0.1rem;
+  }
 }
