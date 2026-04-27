@@ -10,26 +10,20 @@
 </head>
 <body>
 
-  <header class="header">
-
-    <div class="main-header">
-      <h1 class="name">Bruno</h1>
-    </div>
-
-  </header>
-
-  <main>
+  <main class="main">
     <section class="about-me">
 
       <div class="group1">
+        <div class="ball"></div>
         <h2 class="name g1">Welcome, I'm
           <br>
-          <span>B</span>
+          <span id="span1">B</span>
           <span>R</span>
           <span>U</span>
           <span>N</span>
           <span>O</span>
         </h2>
+        <button id="changeColor" class="color-button">Change Color</button>
       </div>
 
       <div class="group2">
@@ -40,7 +34,12 @@
     </section>
 
     <section id="about" class="about-container">
-      <h2 class="about-title">who am I?</h2>
+      <h2 class="about-title">About Me</h2>
+      <div class="about-group">
+        <p class="about">I'm a 14-year-old developer who loves <span class="color">programming</span> and exploring the world of <span class="color">technology</span>! Feel free to explore my website and discover more about me! I hope you enjoy getting to know me :3</p>
+        <p class="about">Furthermore, I'm also from <span class="color">Portugal</span> &#x1F1F5;&#x1F1F9;, a small country in Europe. I'm also part of the <span class="color" translate="no">Hack Club</span> :D</p>
+        <p class="about">I also have quite a few <span class="color">certificates</span> that I've obtained over time (you can see more below).</p>
+      </div>
     </section>
 
   </main>
@@ -52,6 +51,7 @@
     </button>
   </div>
 
+  <script src="changeColor.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

@@ -19,6 +19,7 @@ html {
 }
 
 .header {
+  z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,6 +35,38 @@ h1, h2, h3 {
 .name {
   font-family: "Holtwood One SC", serif;
   color: var(--main-font-color);
+}
+
+.name span {
+  display: inline-block;
+  visibility: hidden;
+  color: var(--main-font-color);
+  font-size: 5rem;
+  animation: up 1.5s ease-out forwards, shine 850ms ease infinite;
+  visibility: hidden;
+  transition: 300ms ease;
+  z-index: 2;
+}
+
+.name span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.name span:nth-child(3) {
+  animation-delay: 0.25s;
+}
+
+.name span:nth-child(4) {
+  transform: translateY(30px);
+  animation-delay: 0.35s;
+}
+
+.name span:nth-child(5) {
+  animation-delay: 0.25s;
+}
+
+.name span:nth-child(6) {
+  animation-delay: 0.1s;
 }
 
 #modeBtn {
@@ -70,13 +103,37 @@ h1, h2, h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .g1 {
   font-size: 1.85rem;
   text-align: center;
-  max-width: 300px;
+}
+
+.group1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ball {
+  background: var(--anim-color);
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  filter: blur(100px);
+  opacity: 0.35;
+  animation: shine2 850ms ease infinite;
+  animation-delay: 0.35s;
+}
+
+.color-button {
+  background: var(--anim-color);
 }
 
 .group2 {
@@ -85,6 +142,7 @@ h1, h2, h3 {
 
 a,
 button {
+  outline: none;
   display: inline-block;
   text-align: center;
   text-decoration: none;
@@ -99,6 +157,7 @@ button {
   border-radius: 24px;
   box-shadow: 3px 3px 0 var(--main-bg-border);
   transition: 100ms ease;
+  cursor: pointer;
 }
 
 a:hover,
@@ -119,20 +178,104 @@ button:active {
   justify-content: center;
   align-items: center;
   margin-top: 10rem;
+  margin-bottom: 2rem;
 }
 
 .about-title {
-  font-size: 1.75rem;
+  font-size: 2.25rem;
+}
+
+/* who am i? */
+
+.color {
+  display: inline-block;
+  color: var(--anim-color);
+  font-weight: bold;
+  text-decoration: underline;
+  transition: 400ms ease;
+}
+
+.about {
+  color: var(--main-font-color);
+  font-size: 1.15rem;
+  text-align: justify;
+  font-family: "Rubik", sans-serif;
+  padding: 1rem;
+  max-width: 550px;
+  line-height: 2rem;
+}
+
+.about-group {
+  border-radius: 56px 24px 24px 56px;
+  border: 3px solid transparent;
+  border-color: var(--anim-color);
+  box-shadow: 5px 5px 0 var(--anim-color);
+  padding: 1rem;
+}
+
+/* ANIMATIONS */
+@keyframes up {
+  0% {opacity: 0; transform: scale(2) translateY(-150px);}
+  100% {visibility: visible; transform: translateY(0);}
+}
+
+@keyframes shine {
+  0%, 100% {color: var(--main-font-color);}
+  50% {color: var(--anim-color);}
+}
+
+@keyframes shine2 {
+  0%, 100% {background: transparent;}
+  50% {background: var(--anim-color);}
 }
 
 /* Responsive */
 
-@media (max-width: 400px) {
+@media (max-width: 650px) {
+  .about-container {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 425px) {
   .about-me {
     flex-direction: column;
   }
   #modeBtn {
     padding: 0.75rem 0.75rem;
     font-size: 0.1rem;
+  }
+  .name {
+    font-size: 1rem;
+  }
+  .name span {
+    font-size: 2rem;
+  }
+  .about {
+    padding: 1rem;
+    font-size: 1rem;
+    line-height: 1.35rem;
+  }
+  .about-title {
+    font-size: 1.85rem;
+    text-align: center;
+  }
+  .about-group {
+    padding: 0.5rem;
+    border-radius: 24px 12px;
+  }
+}
+
+@media (max-width: 250px) {
+  a, button {
+    padding: 0.5rem 1rem;
+  }
+  .about {
+    font-size: 1rem;
+    word-break: break-all;
+  }
+  .about-group {
+    padding: 0;
+    width: 90%;
   }
 }

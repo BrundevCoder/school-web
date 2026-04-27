@@ -3,11 +3,12 @@
   --main-bg-color: #ddd;
   --main-bg-border: #000;
   --main-btn-color: #ddd;
+  --anim-color: #ceaf24;
 }
 
 body.dark-mode {
-  --main-font-color: #eeeeee;
-  --main-bg-color: #111;
+  --main-font-color: #e9e9e9;
+  --main-bg-color: #161515;
   --main-bg-border: #ddd;
   --main-btn-color: #111;
 }
