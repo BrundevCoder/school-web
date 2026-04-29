@@ -8,10 +8,12 @@ function getRandomColor() {
   const colors = [
     "#ceaf24", "#ce2424", "#40ce24",
     "#24b5ce", "#2f24ce", "#24ce8d",
-    "#ff8b2d", "off"
+    "#ff8b2d"
   ]
 
   newColor = colors[Math.floor(Math.random() * colors.length)];
+
+  console.log(newColor)
 
   return newColor;
 }
