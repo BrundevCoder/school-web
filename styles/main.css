@@ -338,7 +338,7 @@ button:active {
   align-items: center;
   min-height: 5rem;
   background: linear-gradient(
-    transparent, var(--anim-color) 75%
+    transparent, var(--anim-color) 70%
   );
   font-family: "Rubik", sans-serif;
   font-weight: bold;
