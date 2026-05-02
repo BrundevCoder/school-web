@@ -4,6 +4,7 @@
   --main-bg-border: #000;
   --main-btn-color: #ddd;
   --anim-color: #ceaf24;
+  --certificate-bg: #ddd;
 }
 
 body.dark-mode {
@@ -11,4 +12,5 @@ body.dark-mode {
   --main-bg-color: #161515;
   --main-bg-border: #ddd;
   --main-btn-color: #111;
+  --certificate-bg: #fff;
 }

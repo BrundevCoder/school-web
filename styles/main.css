@@ -269,6 +269,77 @@ button:active {
   color: var(--main-font-color);
 }
 
+/* Certificates */
+
+.certificates-grid-cotainer {
+  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.certificate-card {
+  padding: 1rem;
+  box-shadow: 0 0 10px var(--anim-color);
+  border: 3px solid var(--anim-color);
+  border-radius: 12px;
+}
+
+.certificate-img {
+  width: 100%;
+  object-fit: scale-down;
+  max-height: 400px;
+  border-radius: 6px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+.certificate-para {
+  color: var(--main-font-color);
+  font-family: "Rubik", sans-serif;
+  text-align: center;
+  font-size: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.mimo {
+  color: mediumslateblue;
+  font-weight: bold;
+}
+
+.harvard {
+  color: #A41034;
+  font-weight: bold;
+}
+
+.anthropic {
+  color: var(--main-font-color);
+  font-weight: bold;
+}
+
+.sololearn {
+  background: linear-gradient(
+  135deg,
+    rgb(0, 145, 145) 20%, rgb(155, 155, 0), mediumslateblue, rgb(255, 6, 213)
+  );
+  color: transparent;
+  background-clip: text;
+  font-weight: bold;
+  filter: brightness(1.25);
+}
+
+.flex-footer {
+  margin-top: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 5rem;
+  background: #333;
+}
+
 /* ANIMATIONS */
 @keyframes up {
   0% {opacity: 0; transform: scale(2) translateY(-150px);}
