@@ -336,6 +336,7 @@ button:active {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   min-height: 5rem;
   background: linear-gradient(
     transparent, var(--anim-color) 70%
